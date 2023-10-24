@@ -116,5 +116,21 @@ class PostController extends Controller
             //kirim ke view with post
             return view('posts.show', compact('post'));
         }
+
+
+        //delete
+        public function destroy(string $id): RedirectResponse{
+            //get post by id
+            $post = Post::findOrFail($id);
+
+            //delete image
+            Storage::delete('public/posts/'. $post->image);
+
+            //delete posts
+            $post->delete();
+
+            //redirect to index
+            return redirect()->route('posts.index')->with(['success'=> 'Data Berhasil di Hapus!']);
+        }
     
 }
