@@ -9,7 +9,7 @@
 
 ## Tujuan
 
-Belajar CRUD menggunakan framework Laravel 10
+Belajar CRUDS menggunakan framework Laravel 10
 
 
 
