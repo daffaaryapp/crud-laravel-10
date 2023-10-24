@@ -9,10 +9,8 @@
 
 ## Tujuan
 
-Belajar Laravel
+Belajar CRUD menggunakan framework Laravel 10
 
 
 
-## Terima Kasih
 
-https://santrikoding.com/
