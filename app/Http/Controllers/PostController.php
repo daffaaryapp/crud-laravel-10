@@ -50,4 +50,16 @@ class PostController extends Controller
         //redirect to index
         return redirect()->route('posts.index')->with(['success' => 'Data Berhasil Disimpan!']);
     }
+    
+
+        //show
+        public function show(string $id): View
+        {
+            //get post by ID
+            $post = Post::findOrFail($id);
+	    
+            //kirim ke view with post
+            return view('posts.show', compact('post'));
+        }
+    
 }
